@@ -1,40 +1,39 @@
-SpreeSidr
-=========
+Spree Sidr
+===================
 
-Introduction goes here.
+A Spree extension that adds a [sidr](http://www.berriart.com/sidr/) powered side menu to your spree application when viewed on a mobile device.
 
-Installation
-------------
 
-Add spree_sidr to your Gemfile:
+Installation	
+=======
+
+**NOTE: The master branch of this repo is the latest version of this extension and may not work with your installation of Spree. Please use the branch specific to your version of spree. Spree 2.0, for example, would use the `2-0-stable` branch of this repo.**
+
+Add this extension to your Gemfile:
 
 ```ruby
-gem 'spree_sidr'
+gem "spree_sidr", :git => "git://github.com/lbrapid/spree_sidr.git"
 ```
 
-Bundle your dependencies and run the installation generator:
+Then run:
 
-```shell
-bundle
+```
+bundle install
+```
+
+Run:
+
+```
 bundle exec rails g spree_sidr:install
 ```
 
-Testing
--------
+in order to copy over the required css and js files.
 
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
+Once installation is complete, view your store on a mobile device and look for the "burger" icon on the top left of the page to toggle the side menu.
 
-```shell
-bundle
-bundle exec rake test_app
-bundle exec rspec spec
-```
+Theme
+=========
 
-When testing your applications integration with this extension you may use it's factories.
-Simply add this require statement to your spec_helper:
+**TODO**: Describe styles to override to customize the default theme
 
-```ruby
-require 'spree_sidr/factories'
-```
-
-Copyright (c) 2013 [name of extension creator], released under the New BSD License
+Copyright (c) 2013 John Dyer, released under the New BSD License
