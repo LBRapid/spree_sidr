@@ -2,3 +2,33 @@
  *= require jquery.sidr.dark
  *= require jquery.sidr.light
 */
+
+#sidr-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/assets/icon-burger.svg");
+  margin: 10px;
+  height: 21px;
+  width: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  #sidr-toggle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  nav#taxonomies {
+    display: none;
+  }
+
+  ul#main-nav-bar {
+    display: none;
+  }
+
+  #link-to-login {
+    display: none;
+  }
+}

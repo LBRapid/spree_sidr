@@ -3,14 +3,14 @@ Deface::Override.new(
   name: 'add_menu_to_application_layout',
   insert_after: 'div.container',
   text: '
-    <a id="sidr-toggle" href="#sidr">Toggle menu</a>
+    <a id="sidr-toggle" href="#sidr"></a>
     <div id="sidr">
       <ul>
         <li id="home-link"><%= link_to Spree.t(:home), spree.root_path %></li>
         <li id="login-link"><%= link_to Spree.t(:login), spree.login_path %></li>
       </ul>
 
-      <% allowed_controllers = %w{spree/home spree/products"} %>
+      <% allowed_controllers = %w{spree/home spree/products spree/taxons spree/store"} %>
       <% if allowed_controllers.any? { |cont| cont == params[:controller] } %>
         <ul>
           <% get_taxonomies.each do |taxonomy| %>
