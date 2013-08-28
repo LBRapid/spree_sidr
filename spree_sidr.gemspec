@@ -3,8 +3,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_sidr'
   s.version     = '1.0.0'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Adds sidr powered side menu to a spree store'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'John Dyer'
