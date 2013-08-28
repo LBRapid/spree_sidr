@@ -12,13 +12,13 @@ Installation
 If you're using Spree 2.0, you will need to add the gem to your Gemfile using this line:
 
 ```ruby
-gem "spree_sidr", :github => "lbrapid/spree_sidr", :branch => '2-0-stable'
+gem "spree_sidr", :github => "LBRapid/spree_sidr", :branch => '2-0-stable'
 ```
 
 If you are using Spree's master branch, then use this line:
 
 ```ruby
-gem "spree_sidr", :github => "lbrapid/spree_sidr"
+gem "spree_sidr", :github => "LBRapid/spree_sidr"
 ```
 
 Then install the gem via Bundler:
