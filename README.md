@@ -9,19 +9,25 @@ Installation
 
 **NOTE: The master branch of this repo is the latest version of this extension and may not work with your installation of Spree. Please use the branch specific to your version of spree. Spree 2.0, for example, would use the `2-0-stable` branch of this repo.**
 
-Add this extension to your Gemfile:
+If you're using Spree 2.0, you will need to add the gem to your Gemfile using this line:
+
+```ruby
+gem "spree_sidr", :git => "git://github.com/lbrapid/spree_sidr.git", :branch => '2-0-stable'
+```
+
+If you are using Spree's master branch, then use this line:
 
 ```ruby
 gem "spree_sidr", :git => "git://github.com/lbrapid/spree_sidr.git"
 ```
 
-Then run:
+Then install the gem via Bundler:
 
 ```
 bundle install
 ```
 
-Run:
+Finally, run spree_sidr's installer:
 
 ```
 bundle exec rails g spree_sidr:install
