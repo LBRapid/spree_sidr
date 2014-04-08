@@ -13,9 +13,11 @@ Deface::Override.new(
       <% allowed_controllers = %w{spree/home spree/products spree/taxons spree/store"} %>
       <% if allowed_controllers.any? { |cont| cont == params[:controller] } %>
         <ul>
-          <% get_taxonomies.each do |taxonomy| %>
-            <h6 class="taxonomy-root"><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></h6>
-            <%= taxons_tree(taxonomy.root, @taxon, Spree::Config[:max_level_in_taxons_menu] || 1) %>
+          <% if @taxonomies %>
+            <% @taxonomies.each do |taxonomy| %>
+              <h6 class="taxonomy-root"><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></h6>
+              <%= taxons_tree(taxonomy.root, @taxon, Spree::Config[:max_level_in_taxons_menu] || 1) %>
+            <% end %>
           <% end %>
         </ul>
       <% end %>
